@@ -26,7 +26,7 @@ La console (sidebar e testata) è scura in entrambi i temi. Il rosso è riservat
 - Applicabilità nel catalogo: `appliesTo: node`.
 - Stack richiesto nell'host: Vue 3, Tailwind CSS 4 con `@tailwindcss/vite`, Node per lo script dei contrasti. Font `@fontsource-variable/saira` e `@fontsource-variable/jetbrains-mono`: il prompt propone di installarli se mancano e li installa solo dopo la tua conferma (Regola 8 di `dr-fe`).
 - `-Update` non si propaga alle dipendenze: aggiornare solo questo pacchetto lascia `dr-fe` com'è. `/dr-get-latest` aggiorna anche `dr-fe`, che ha una propria voce nel manifest.
-- Stato nel catalogo di `dr-guidelines`: la voce `dr-ux-kitt` (e il suo inserimento tra gli opzionali di `vue-fe`) arriva con una modifica separata del core. Fino ad allora `/dr-scaffold` non lo propone e l'installer del pacchetto, che si appoggia alla libreria del core, può non trovarlo nel catalogo.
+- Stato nel catalogo di `dr-guidelines`: la voce `dr-ux-kitt` e il suo inserimento tra gli opzionali di `vue-fe` sono nella PR davraf-amuro/dr-guidelines#25. Finché la PR non è fusa in `main`, `/dr-scaffold` non propone il tema e l'installer del pacchetto, che legge il catalogo di `main`, non lo trova.
 
 File di altri pacchetti citati:
 
@@ -96,4 +96,4 @@ K.I.T.T. e Knight Rider sono marchi dei rispettivi titolari (NBCUniversal). Ques
 
 ---
 
-*Revisione v1.0 — 2026-10-14 14:00 — claude-opus-5-5*
+*Revisione v1.1 — 2026-10-14 18:30 — claude-sonnet-5-5*
