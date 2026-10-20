@@ -21,12 +21,13 @@ La console (sidebar e testata) è scura in entrambi i temi. Il rosso è riservat
 
 ## 🔗 Dipendenze e domini
 
-- Dipende da: `dr-fe`. Il tema fornisce i token di `design-tokens.instructions.md` di `dr-fe` (nomi, coppie `on-*`, soglie di contrasto, tema chiaro/scuro con `data-theme`, Regola 8 su animazioni e dipendenze); senza quel contratto le regole del tema non hanno base. Quando la voce del pacchetto è nel catalogo del core, l'installer installa `dr-fe` prima, se manca (vedi sotto lo stato del catalogo).
+- Dipende da: `dr-fe`. Il tema fornisce i token di `design-tokens.instructions.md` di `dr-fe` (nomi, coppie `on-*`, soglie di contrasto, tema chiaro/scuro con `data-theme`, Regola 8 su animazioni e dipendenze); senza quel contratto le regole del tema non hanno base. L'installer installa `dr-fe` prima, se manca.
 - Richiesto da: nessuno.
 - Applicabilità nel catalogo: `appliesTo: node`.
 - Stack richiesto nell'host: Vue 3, Tailwind CSS 4 con `@tailwindcss/vite`, Node per lo script dei contrasti. Font `@fontsource-variable/saira` e `@fontsource-variable/jetbrains-mono`: il prompt propone di installarli se mancano e li installa solo dopo la tua conferma (Regola 8 di `dr-fe`).
 - `-Update` non si propaga alle dipendenze: aggiornare solo questo pacchetto lascia `dr-fe` com'è. `/dr-get-latest` aggiorna anche `dr-fe`, che ha una propria voce nel manifest.
-- Stato nel catalogo di `dr-guidelines`: la voce `dr-ux-kitt` e il suo inserimento tra gli opzionali di `vue-fe` sono nella PR davraf-amuro/dr-guidelines#25. Finché la PR non è fusa in `main`, `/dr-scaffold` non propone il tema e l'installer del pacchetto, che legge il catalogo di `main`, non lo trova.
+- Stato nel catalogo di `dr-guidelines`: la voce `dr-ux-kitt` è presente e compare tra gli opzionali di `vue-fe`: `/dr-scaffold` propone il tema e l'installer lo trova.
+- Mutuamente esclusivo con `dr-ux-lcars`: un solo tema per host. Le istruzioni dei due temi hanno lo stesso `applyTo` (`**/*.css,**/*.vue`) e si contraddicono se installate insieme; il catalogo li dichiara in `conflictsWith`. Per cambiare tema, rimuovi prima l'altro.
 
 File di altri pacchetti citati:
 
